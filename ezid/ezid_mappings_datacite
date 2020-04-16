@@ -1,0 +1,7 @@
+_profile = datacite
+/resource/titles/title = $1
+/resource/creators/creator/creatorName = $2
+/resource/publisher = Automated Knowledge Base Construction (AKBC)
+/resource/publicationYear = 2019
+/resource/resourceType@resourceTypeGeneral = Text
+_target = $3
