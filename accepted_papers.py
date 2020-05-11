@@ -7,14 +7,14 @@ def get_papers(client):
     print ('Connected to ', client.baseurl)
 
     accepted_notes = client.get_notes(
-        invitation='AKBC.ws/2019/Conference/-/Paper.*/Decision')
+        invitation='AKBC.ws/2020/Conference/Paper.*/-/Decision')
 
     papers = []
     for index, acc_note in enumerate(accepted_notes):
         ppr_number = str(acc_note.invitation.split('Paper')[1].split('/')[0])
         if acc_note.content['decision'] == 'Reject':
             continue
-        blind_note = client.get_notes(invitation = 'AKBC.ws/2019/Conference/-/Blind_Submission', number = ppr_number)[0]
+        blind_note = client.get_notes(invitation = 'AKBC.ws/2020/Conference/-/Blind_Submission', number = ppr_number)[0]
         paper = blind_note.content
         paper['forum_id'] = blind_note.id
         author_emails = paper['authorids']
