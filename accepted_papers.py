@@ -17,6 +17,8 @@ def get_papers(client):
         blind_note = client.get_notes(invitation = 'AKBC.ws/2020/Conference/-/Blind_Submission', number = ppr_number)[0]
         paper = blind_note.content
         paper['forum_id'] = blind_note.id
+        paper['UID'] = paper['forum_id']
+        paper['session'] = []
         author_emails = paper['authorids']
         author_profiles = []
         for email in author_emails:
