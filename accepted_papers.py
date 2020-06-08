@@ -17,7 +17,7 @@ def get_papers(client):
         blind_note = client.get_notes(invitation = 'AKBC.ws/2020/Conference/-/Blind_Submission', number = ppr_number)[0]
         paper = blind_note.content
         paper['forum_id'] = blind_note.id
-        paper['UID'] = paper['forum_id']
+        paper['UID'] = 'Paper' + ppr_number
         paper['session'] = []
         author_emails = paper['authorids']
         author_profiles = []
@@ -36,7 +36,7 @@ def get_papers(client):
     print('Accepted submissions: ', len(papers))
     return papers
 
-def save_to_json(papers, ofile = "accepted.json"):
+def save_to_json(papers, ofile = "papers.json"):
     with open(ofile, 'w') as f:
         json.dump(papers, f, indent=2)
 
