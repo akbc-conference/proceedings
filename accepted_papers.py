@@ -18,7 +18,6 @@ def get_papers(client):
         paper = blind_note.content
         paper['forum_id'] = blind_note.id
         paper['UID'] = ppr_number
-        paper['session'] = []
         author_emails = paper['authorids']
         author_profiles = []
         for email in author_emails:
