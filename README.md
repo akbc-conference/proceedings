@@ -6,5 +6,5 @@ code to create/manage proceedings
 Downloaded by running `accepted_papers.py` after installing the following:
 
 ```
-pip install openreview-py argparse
+pip install openreview-py argparse wget
 ```

@@ -1,6 +1,7 @@
 import argparse
 import json
 from pprint import pprint
+import wget
 
 def parse_arguments():
   parser = argparse.ArgumentParser(description="Write Markdown pages for each paper")
@@ -20,7 +21,11 @@ header:
 ---
     """.format(fid=paper['forum_id'], title=paper['title']))
 
-# def write_pdf(paper, dir):
+def write_pdf(paper, dir):
+  if paper['pdf'] != "":
+    url = "https://openreview.net" + paper['pdf']
+    wget.download(url, dir + "/" + paper["forum_id"] + ".pdf")
+
 
 
 if __name__ == "__main__":
@@ -29,3 +34,4 @@ if __name__ == "__main__":
 
   for paper in papers:
     write_md(paper, args.output_md)
+    write_pdf(paper, args.output_pdf)
