@@ -33,5 +33,8 @@ if __name__ == "__main__":
   papers = json.load(open(args.papers))
 
   for paper in papers:
-    write_md(paper, args.output_md)
-    write_pdf(paper, args.output_pdf)
+    if "archival_status" not in paper or paper["archival_status"] == "Archival":
+      write_md(paper, args.output_md)
+      write_pdf(paper, args.output_pdf)
+    else:
+      print("--", paper['forum_id'])
