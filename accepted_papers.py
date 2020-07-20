@@ -19,6 +19,8 @@ def get_papers(client):
         paper['forum_id'] = blind_note.id
         paper['UID'] = ppr_number
         author_emails = paper['authorids']
+        if len(author_emails) != len(paper['authors']):
+            print("!!!! => mismatch for " + blind_note.id)
         author_profiles = []
         for email in author_emails:
             try:
