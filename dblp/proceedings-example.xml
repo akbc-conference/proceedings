@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE dblpsubmission SYSTEM "dblpsubmission.dtd">
+<?xml-stylesheet type="text/xsl" href="dblpsubmission.xsl" ?>
+<dblpsubmission>
+  <proceedings>
+    <key>crypto</key>
+    <editor>Tal Rabin</editor>
+    <title>Advances in Cryptology - CRYPTO 2010.
+      30th Annual Cryptology Conference.</title>
+    <publisher>Springer</publisher>
+    <year>2010</year>
+    <isbn type="print">978-3-642-14622-0</isbn>
+    <doi>10.1007/978-3-642-14623-7</doi>
+    <conf>
+      <acronym>CRYPTO</acronym>
+      <number>30</number>
+      <location>Santa Barbara, California, USA</location>
+      <date>August 15-19, 2010</date>
+      <url>http://www.iacr.org/conferences/crypto2010/</url>
+    </conf>
+    <series>
+      <key>lncs</key>
+      <title>Lecture Notes in Computer Science</title>
+      <number>6223</number>
+    </series>
+    <toc>
+      <section>Leakage</section>
+      <publ>
+        <author>Zvika Brakerski</author>
+        <author>Shafi Goldwasser</author>
+        <title>Circular and Leakage Resilient Public-Key Encryption
+          under Subgroup Indistinguishability</title>
+        <pages>1-20</pages> 
+        <doi>10.1007/978-3-642-14623-7_1</doi>
+      </publ>
+      <section>Lattice</section>
+      <publ>
+        <author>Chris Peikert</author>
+        <title>An Efficient and Parallel Gaussian Sampler for Lattices.</title>
+        <pages>80-97</pages>
+        <doi>10.1007/978-3-642-14623-7_5</doi>
+      </publ>
+    </toc>
+  </proceedings>
+</dblpsubmission>
