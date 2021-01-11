@@ -33,7 +33,7 @@ def get_papers(client):
                 author_profile = ""
             author_profiles.append(author_profile)
         paper['author_profiles'] = author_profiles
-        papers.append(blind_note.content)
+        papers.append(paper)
     print('Accepted submissions: ', len(papers))
     return papers
 
