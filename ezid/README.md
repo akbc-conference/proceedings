@@ -2,6 +2,8 @@
 
 ## Prepare Metadata
 
+Copy over the `accepted.json` created from `accepted_papers.py`. Make sure URLs for PDFs in `create_ezid_csv` is correct.
+
 Run `create_ezid_csv` to generate the `accepted_ezid.csv` file, which is just a CSV version containing titles and authors.
 
 1(b). _Optional_: Check to make sure `ezid_mappings_dc` looks okay.
@@ -9,6 +11,8 @@ Run `create_ezid_csv` to generate the `accepted_ezid.csv` file, which is just a 
 ## Generate DOIs
 
 Generate DOIs for the papers (submits to EZID):
+
+Note: Uses Python2, which you might have to call explicitly.
 
 ```
 ./batch-register.py -c <username>:<password> -s <shoulder> mint ezid_mappings_dc accepted_ezid.csv > gen_dois.csv
