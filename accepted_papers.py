@@ -47,7 +47,7 @@ if __name__ == "__main__":
     parser.add_argument('--password', required=True, help='OpenReview password')
     args = parser.parse_args()
 
-    client = openreview.Client(baseurl='https://openreview.net', username=args.username, password=args.password)
+    client = openreview.Client(baseurl='https://api.openreview.net', username=args.username, password=args.password)
     papers = get_papers(client)
     save_to_json(papers)
     
