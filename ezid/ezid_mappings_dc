@@ -2,6 +2,6 @@ _profile = dc
 dc.title = $1
 dc.creator = $2
 dc.publisher = Automated Knowledge Base Construction (AKBC)
-dc.date = 2019
+dc.date = 2020
 dc.type = Text
 _target = $3

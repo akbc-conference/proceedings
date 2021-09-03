@@ -17,7 +17,7 @@ def read_csv(ifile = "gen_dois.csv"):
 def augment_data(papers, dois):
     idx = 0
     for p in papers:
-        if p['archival status'] == "Archival":
+        if 'archival_status' not in p or p['archival_status'] == "Archival":
             p["doi"] = dois[idx]
             idx += 1
         else:
@@ -30,6 +30,6 @@ def save_to_json(papers, ofile = "accepted_aug.json"):
 if __name__ == "__main__":
     papers = read_from_json()
     dois = read_csv()
-    assert len([p for p in papers if p['archival status'] == "Archival"]) == len(dois)
+    assert len([p for p in papers if 'archival_status' not in p or p['archival_status'] == "Archival"]) == len(dois)
     augment_data(papers, dois)
     save_to_json(papers)
