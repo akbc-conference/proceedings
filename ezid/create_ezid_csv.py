@@ -11,7 +11,7 @@ def write_csv(papers, ofile = "accepted_ezid.csv"):
             if 'archival_status' not in p or p['archival_status'] == "Archival":
                 title = p['title'] #.encode('utf-8')
                 authors = format_authors(p['authors']) #.encode('utf-8')
-                url = "https://www.akbc.ws/2020/papers/" + p['forum_id']
+                url = "https://www.akbc.ws/2021/papers/" + p['forum_id']
                 writer.writerow([title, authors, url])
 
 def read_from_json(ifile = "accepted.json"):
